@@ -1,0 +1,56 @@
+.title {
+    width: 40%;
+    @include montserrat(700);
+    font-size: 50px;
+
+    &::after {
+        display: block;
+        content: "";
+        height: 4px; 
+        width: 13%; 
+        background-color: #FCBB08; 
+        transition: width 0.4s ease-in-out;
+        margin-top: 1rem;
+    }
+    
+    @media (max-width: 1280px) {
+        & {
+            font-size: 44px;
+        }
+
+        &::after {
+            margin-top: 0.5rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        & {
+            font-size: 35px;
+        }
+
+        &::after {
+            width: 22%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        & {
+            font-size: 31px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        & {
+            width: 50%;
+            padding-left: 2rem;
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        & {
+            padding-left: 1rem;
+            font-size: 26px;
+        }
+    }
+}

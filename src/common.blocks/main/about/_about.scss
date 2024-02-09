@@ -1,0 +1,54 @@
+.about {
+    background-color: $bgColorForEvenBlocks;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 13rem 12rem;
+    }
+
+    &__text {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    @media (max-width: 1440px) {
+        &__inner {
+            padding: 10rem 8rem;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        &__inner {
+            padding: 6rem 3rem;
+        }
+
+        &__text {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__inner {
+            padding: 4rem 3rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__inner {
+            padding: 3rem 2rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__inner {
+            flex-direction: column;
+            padding: 2rem 1rem;
+        }
+
+        &__text {
+            width: 100%;
+            margin-top: 1.2rem;
+        }
+    }
+}

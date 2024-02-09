@@ -1,0 +1,109 @@
+.menu {
+    width: 45%;
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0 1rem;
+    }
+
+    &__link {
+        color: black;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+
+        &::after {
+            display: block;
+            content: "";
+            height: 3px; 
+            width: 0%; 
+            background-color: #FCBB08; 
+            transition: width 0.4s ease-in-out;
+        }
+
+        &_active::after {
+            width: 100%;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1440px) {
+        & {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        & {
+            width: 55%;
+        }
+
+        &__list {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        & {
+            width: 70%;
+        }
+
+        &__list {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__list {
+            font-size: 12px;
+            padding: 0 0.1rem;
+        }
+
+        &__link::after {
+            height: 2px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        & {
+            width: 95%;
+        }
+
+        &__list {
+            font-size: 13px;
+            justify-content: space-between;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        & {
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                height: 0px;
+            }
+            
+            // &::-webkit-scrollbar-track {
+            //     background: rgba(241, 241, 241, 0);
+            // }
+    
+            // &::-webkit-scrollbar-thumb {
+            //     background-color: rgb(189, 189, 189);
+            //     border-radius: 5px;
+            // }
+        }
+
+        
+
+        &__list {
+            min-width: 170%;
+            font-size: 14px;
+            margin-bottom: 0.2rem;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.footer {
+    &__content {
+        background-color: #373A39;
+        @include flexible-column ();
+        align-items: center;
+        padding-top: 5rem;
+    }
+
+    &__logo {
+        width: 9%;
+        @include flexible-column ();
+        align-items: center;
+    }
+
+    &__logo::after {
+        display: block;
+        margin-top: 1rem;
+        content: "";
+        height: 2px; 
+        width: 100%; 
+        background-color: #FCBB08; 
+    }
+
+    &__contacts {
+        width: 37%;
+        margin-top: 3rem;
+    }
+
+    &__social-links {   
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    &__social-link {
+        @include montserrat(300);
+        font-size: 12px;
+        letter-spacing: 4px;
+        color: white;
+        text-decoration: none;
+        transition: color .2s ease-out;
+    }
+
+    &__social-link:hover {
+        color: #cecece
+    }
+
+    &__contacts-info {
+        @include flexible-column ();
+        align-items: center;
+        list-style-type: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        color: #A8A8A8;
+    }
+
+    &__contacts-info {
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    &__contacts-info-item {
+        margin-bottom: 1rem;
+    }
+
+    &__bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2A2C2B;
+        color: #CCCCCC;
+        padding: 2rem 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    @media (max-width: 1440px) {
+        &__contacts {
+            width: 60%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__contacts {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__content {
+            padding-top: 4rem;
+        }
+
+        &__logo {
+            width: 17%;
+        }
+
+        &__contacts {
+            width: 95%;
+        }
+
+        &__social-link {
+            font-size: 11px;
+        }
+
+        &__contacts-info-item {
+            margin-bottom: 0.5rem;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__content {
+            padding-top: 3rem;
+        }
+
+        &__contacts {
+            margin-top: 1rem;
+        }
+
+        &__social-links-item {
+            margin: .5rem;
+        }
+
+        &__social-links {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__contacts-info {
+            margin-top: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__logo {
+            width: 25%;
+        }
+    }
+}

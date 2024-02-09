@@ -1,0 +1,78 @@
+.vision {
+    display: flex;
+    background-color: $bgColorForEvenBlocks;
+    align-items: center;
+
+    &__title {
+        width: 55%;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        padding: 8rem 12rem;
+    }
+
+    &__p-text {
+        font-size: 20px;
+    }
+
+    @media (max-width: 1440px) {
+        &__image {
+            width: 45%;
+            height: 50%;
+        }
+
+        &__title {
+            width: 82%;
+            margin-bottom: 2rem;
+        }
+
+        &__text {
+            padding: 2rem 4rem;
+        }
+    }
+    
+    @media (max-width: 1280px) {
+        &__image {
+            width: 50%;
+        }
+
+        &__title {
+            margin-bottom: 1rem;
+        }
+
+        &__text {
+            padding: 1rem 3rem;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__text {
+            padding: 1rem 1rem 1rem 2rem;
+        }
+
+        &__p-text {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        & {
+            flex-direction: column-reverse;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__text {
+            padding: 2rem 1rem 1rem 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__text {
+            padding: 1rem 0.5rem 0.5rem 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.testimonial {
+    &__quote {
+        font-family: 'Merriweather', serif;
+        padding: 8rem;
+        text-align: center;
+    }
+
+    &__quote-body {
+        font-size: 18px;
+    }
+
+    &__quote-author {
+        margin-top: 3rem;
+        color: #9E9E9E
+    }
+
+    &__video {
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__video::after {
+        content: ''; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        background: rgba(0,0,0,.2);  
+        opacity: 0; 
+    }
+
+    &__video:hover::after {
+        opacity: 1;
+    }
+
+    &__video-img {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__facts {
+        display: flex;
+        justify-content: space-between;
+        padding: 8rem 26rem;
+    }
+
+    &__fact {
+        @include flexible-column ();
+    }
+
+    &__fact-value {
+        @include montserrat(700);
+        font-size: 60px;
+    }
+
+    &__fact-parameter {
+        margin-top: 0.4rem;
+        font-family: 'Open Sans', sans-serif;
+        color: #00B2A0;
+    }
+
+    @media (max-width: 1440px) {
+        &__quote {
+            padding: 6rem;
+        }
+
+        &__facts {
+            padding: 6rem 12rem;
+        }
+    }
+    
+    @media (max-width: 1280px) {
+        &__fact-value {
+            font-size: 50px;
+        }
+
+        &__fact-parameter {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__quote {
+            padding: 2rem 6rem;
+        }
+
+        &__facts {
+            padding: 4rem 8rem;
+        }
+
+        &__fact-value {
+            font-size: 44px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__quote {
+            padding: 1rem
+        }
+
+        &__quote-body {
+            font-size: 16px;
+        }
+
+        &__facts {
+            padding: 4rem;
+        }
+
+        &__fact-value {
+            font-size: 38px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__quote {
+            margin: 0;
+        }
+
+        &__quote-author {
+            margin: 2rem 0;
+        }
+
+        &__facts {
+            padding: 2rem;
+        }
+
+        &__fact-value {
+            font-size: 35px;
+        }
+
+        &__fact-parameter {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__quote {
+            padding: 1.5rem 0;
+        }
+
+        &__quote-body {
+            margin: 0 1rem;
+        }
+
+        &__facts {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        &__fact {
+            margin: 0.2rem;
+        }
+
+        &__fact-value {
+            font-size: 30px;
+        }
+
+        &__fact-parameter {
+            font-size: 13px;
+        }
+    }
+}
